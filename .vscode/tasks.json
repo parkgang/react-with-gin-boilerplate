@@ -48,6 +48,19 @@
           "PATH": "${env:GOPATH}/bin:${env:PATH}"
         }
       }
+    },
+    {
+      "label": "live reloading gin server",
+      "type": "shell",
+      "command": "gin",
+      "args": ["--immediate", "--notifications"],
+      "options": {
+        "cwd": "${workspaceFolder}/server",
+        "env": {
+          "PATH": "${env:GOPATH}/bin:${env:PATH}",
+          "GO_ENV": "development"
+        }
+      }
     }
   ]
 }

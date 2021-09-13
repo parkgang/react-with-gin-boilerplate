@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Attach to Gin",
+      "type": "go",
+      "request": "attach",
+      "mode": "local",
+      "processId": "gin-bin"
+    },
+    {
       "name": "Server",
       "type": "go",
       "request": "launch",
