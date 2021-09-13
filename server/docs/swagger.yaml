@@ -1,0 +1,210 @@
+definitions:
+  models.ErrResponse:
+    properties:
+      message:
+        type: string
+    type: object
+  models.Pong:
+    properties:
+      message:
+        example: pong
+        type: string
+    type: object
+  models.User:
+    properties:
+      arg:
+        example: 99
+        type: integer
+      name:
+        example: kyungeun
+        type: string
+    required:
+    - arg
+    - name
+    type: object
+info:
+  contact: {}
+paths:
+  /ping:
+    get:
+      description: gin server의 헬스를 체크합니다.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Pong'
+      summary: Server Health Check
+  /users:
+    delete:
+      consumes:
+      - application/json
+      description: "전체 사용자 정보를 삭제합니다. 모든데이터가 날라가므로 주의해서 사용해주세요\U0001F628"
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+      summary: 전체 사용자 삭제
+      tags:
+      - User
+    get:
+      consumes:
+      - application/json
+      description: 전체 사용자를 반환합니다.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.User'
+            type: array
+        "404":
+          description: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+      summary: 전체 사용자 조회
+      tags:
+      - User
+    post:
+      consumes:
+      - application/json
+      description: 사용자를 생성합니다.
+      parameters:
+      - description: 사용자 메타데이터
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          headers:
+            Location:
+              description: /users/1
+              type: string
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+      summary: 사용자 생성
+      tags:
+      - User
+  /users/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: 사용자를 삭제합니다.
+      parameters:
+      - description: 사용자 id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: ""
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+        "404":
+          description: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+      summary: 사용자 삭제
+      tags:
+      - User
+    get:
+      consumes:
+      - application/json
+      description: 사용자 정보를 반환합니다.
+      parameters:
+      - description: 사용자 id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+        "404":
+          description: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+      summary: 사용자 조회
+      tags:
+      - User
+    put:
+      consumes:
+      - application/json
+      description: 사용자 정보를 수정합니다.
+      parameters:
+      - description: 사용자 id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: 사용자 메타데이터
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/models.User'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          headers:
+            Location:
+              description: /users/1
+              type: string
+          schema:
+            $ref: '#/definitions/models.User'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+        "404":
+          description: ""
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/models.ErrResponse'
+      summary: 사용자 수정
+      tags:
+      - User
+swagger: "2.0"

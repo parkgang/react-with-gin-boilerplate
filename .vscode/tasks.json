@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cra start",
+      "type": "shell",
+      "command": "pm2",
+      "args": ["--name", "modern-board-cra", "start", "npm", "--", "start"],
+      "options": {
+        "cwd": "${workspaceFolder}/webapp"
+      }
+    },
+    {
+      "label": "cra kill",
+      "type": "shell",
+      "command": "pm2",
+      "args": ["kill", "--name", "modern-board-cra"],
+      "options": {
+        "cwd": "${workspaceFolder}/webapp"
+      }
+    },
+    {
+      "label": "container up",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["up", "-d"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "container stop",
+      "type": "shell",
+      "command": "docker-compose",
+      "args": ["stop"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "swag docs update",
+      "type": "shell",
+      "command": "swag",
+      "args": ["i"],
+      "options": {
+        "cwd": "${workspaceFolder}/server",
+        "env": {
+          "PATH": "${env:GOPATH}/bin:${env:PATH}"
+        }
+      }
+    }
+  ]
+}

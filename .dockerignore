@@ -1,0 +1,9 @@
+# common
+.git
+LICENSE
+*.md
+*.log
+
+# webapp
+node_modules
+webapp/build

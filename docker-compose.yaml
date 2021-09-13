@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  mysql:
+    build:
+      context: ./docker/mysql
+      dockerfile: .
+    image: modern-board-mysql
+    container_name: mysql-dev
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    command:
+      # 한글과 이모지 입력을 위하여 기본 문자셋 인코딩 변경
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci

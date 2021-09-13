@@ -1,0 +1,36 @@
+@HOST = http://localhost:8080
+@API_END_POINT = {{HOST}}/api
+
+### SPA Files
+GET {{HOST}}
+
+### Server Health Check
+GET {{API_END_POINT}}/ping
+
+### 사용자 생성
+POST {{API_END_POINT}}/users
+
+{
+    "name": "kyungeun",
+    "arg": 99
+}
+
+### 전체 사용자 조회
+GET {{API_END_POINT}}/users
+
+### 사용자 조회
+GET {{API_END_POINT}}/users/1
+
+### 사용자 수정
+PUT {{API_END_POINT}}/users/1
+
+{
+    "name": "이름 변경",
+    "arg": 123
+}
+
+### 전체 사용자 삭제
+DELETE  {{API_END_POINT}}/users
+
+### 사용자 삭제
+DELETE  {{API_END_POINT}}/users/1

@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Server",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${workspaceFolder}/server",
+      "env": {
+        "GO_ENV": "development"
+      },
+      "preLaunchTask": "container up",
+      "postDebugTask": "container stop"
+    },
+    {
+      "name": "Client",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/webapp/src",
+      "preLaunchTask": "cra start",
+      "postDebugTask": "cra kill"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Server/Client",
+      "configurations": ["Server", "Client"]
+    }
+  ]
+}

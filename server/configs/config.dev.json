@@ -1,0 +1,14 @@
+{
+  "server": {
+    "port": ":8080"
+  },
+  "database": {
+    "mysql": {
+      "host": "localhost",
+      "port": "3306",
+      "user": "root",
+      "pass": "example",
+      "dbname": "modern_board"
+    }
+  }
+}
