@@ -45,5 +45,5 @@ go get github.com/codegangsta/gin
 > mod
 
 ```shell
-go mod init github.com/parkgang/modern-board
+go mod init github.com/parkgang/react-with-gin-boilerplate
 ```

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/parkgang/modern-board/models"
+	"github.com/parkgang/react-with-gin-boilerplate/models"
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

@@ -5,7 +5,14 @@
       "label": "cra start",
       "type": "shell",
       "command": "pm2",
-      "args": ["--name", "modern-board-cra", "start", "npm", "--", "start"],
+      "args": [
+        "--name",
+        "react-with-gin-boilerplate-cra",
+        "start",
+        "npm",
+        "--",
+        "start"
+      ],
       "options": {
         "cwd": "${workspaceFolder}/webapp"
       }
@@ -14,7 +21,7 @@
       "label": "cra kill",
       "type": "shell",
       "command": "pm2",
-      "args": ["kill", "--name", "modern-board-cra"],
+      "args": ["kill", "--name", "react-with-gin-boilerplate-cra"],
       "options": {
         "cwd": "${workspaceFolder}/webapp"
       }

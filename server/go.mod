@@ -1,4 +1,4 @@
-module github.com/parkgang/modern-board
+module github.com/parkgang/react-with-gin-boilerplate
 
 go 1.16
 

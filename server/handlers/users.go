@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/parkgang/modern-board/libs"
-	"github.com/parkgang/modern-board/models"
-	"github.com/parkgang/modern-board/mysql"
+	"github.com/parkgang/react-with-gin-boilerplate/libs"
+	"github.com/parkgang/react-with-gin-boilerplate/models"
+	"github.com/parkgang/react-with-gin-boilerplate/mysql"
 	"gorm.io/gorm"
 )
 

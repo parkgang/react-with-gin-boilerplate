@@ -21,7 +21,7 @@
 
 gin server와 함께 react를 편리하게 개발할 수 있는 시작점을 제공합니다.
 바닐라 상태의 gin에서 제품 개발에 더 편리하도록 기능을 확장하였습니다.
-이외 [Microsoft Teams](https://www.microsoft.com/ko-kr/microsoft-teams/group-chat-software) UI으로 구성된 기본적인 에제 코드가 작성되어 있습니다. 더 자세한 내용은 각 제품의 [webapp (react)](./webapp), [server (gin)](./server) 를 참고해주세요. 핵심으로 제공하는 기능을 아래와 같습니다.
+이외 [Microsoft Teams](https://www.microsoft.com/ko-kr/microsoft-teams/group-chat-software) UI으로 구성된 기본적인 에제 코드가 작성되어 있습니다. 더 자세한 내용은 각 제품의 [webapp (react)](./webapp), [server (gin)](./server) 를 참고해주세요. 핵심으로 제공하는 기능은 아래와 같습니다.
 
 &nbsp;환경에 맞는 config를 읽을 수 있도록 설정
 
@@ -35,7 +35,7 @@ gin server와 함께 react를 편리하게 개발할 수 있는 시작점을 제
 
 &nbsp;`Dockerfile` 으로 prod 배포 간편화
 
-&nbsp;recoil, react-query, react-error-boundary등 react 개발을 위해 기본적으로 들어가는 기본 설정 및 예제 코드 제공
+&nbsp;recoil, react-query, react-error-boundary 등 react 개발을 위해 기본적으로 들어가는 기본 설정 및 예제 코드 제공
 
 &nbsp;반응형 웹 지원
 
@@ -69,6 +69,6 @@ server, client side 모두 vscode 디버깅 사용 시 **자동**으로 실행�
 prod으로 쉽게 배포할 수 있도록 `Dockerfile` 파일이 모두 작성되어 있으니 개발 프로세스에 맞춰서 `CI/CD` pipeline으로 태우거나 혹은 아래의 cli로 배포의 재미를 느껴보세요!
 
 ```shell
-docker build -t parkgang/modern-board:0.1.0 .
-docker run --name modern-board-prod -p 22000:8080 -d parkgang/modern-board:0.1.0
+docker build -t parkgang/react-with-gin-boilerplate:0.1.0 .
+docker run --name react-with-gin-boilerplate-prod -p 22000:8080 -d parkgang/react-with-gin-boilerplate:0.1.0
 ```
