@@ -60,7 +60,13 @@
       "label": "live reloading gin server",
       "type": "shell",
       "command": "gin",
-      "args": ["--immediate", "--notifications"],
+      "args": [
+        // 기본 port는 cra webpack dev server와 port가 겹치므로 live reloading 5000으로 실행
+        "--port",
+        "5000",
+        "--immediate",
+        "--notifications"
+      ],
       "options": {
         "cwd": "${workspaceFolder}/server",
         "env": {
