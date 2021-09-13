@@ -12,14 +12,36 @@
     </tbody>
   </table>
   <h1 align="center">
-    ✨ modern-board 🤟
+    📦 react-with-gin-boilerplate 📦
   </h1>
 </p>
 <div align="center">
 
-`Bulletins created using modern stacks`
+`react boilerplate with gin`
 
-일반적인 기능을 가지고 있는 게시판 **웹 앱**이지만 나름대로 현대적인 기술을 사용하여 재해석한 프로젝트입니다. 룩앤필은 [Microsoft Teams](https://www.microsoft.com/ko-kr/microsoft-teams/group-chat-software) 를 따라갑니다. 프로젝트에 사용 된 기술은 각 제품의 [webapp (react)](./webapp), [server (gin)](./server) 를 참고해주세요.
+gin server와 함께 react를 편리하게 개발할 수 있는 시작점을 제공합니다.
+바닐라 상태의 gin에서 제품 개발에 더 편리하도록 기능을 확장하였습니다.
+이외 [Microsoft Teams](https://www.microsoft.com/ko-kr/microsoft-teams/group-chat-software) UI으로 구성된 기본적인 에제 코드가 작성되어 있습니다. 더 자세한 내용은 각 제품의 [webapp (react)](./webapp), [server (gin)](./server) 를 참고해주세요. 핵심으로 제공하는 기능을 아래와 같습니다.
+
+&nbsp;환경에 맞는 config를 읽을 수 있도록 설정
+
+&nbsp;SPA를 위한 설정 (CSR Router도 문제없이 동작)
+
+&nbsp;ORM 사용
+
+&nbsp;swagger 탑재
+
+&nbsp;`docker-compose` 으로 편리한 개발환경 구축
+
+&nbsp;`Dockerfile` 으로 prod 배포 간편화
+
+&nbsp;recoil, react-query, react-error-boundary등 react 개발을 위해 기본적으로 들어가는 기본 설정 및 예제 코드 제공
+
+&nbsp;반응형 웹 지원
+
+&nbsp;server, client 모두 디버깅 환경 마련
+
+&nbsp;이외, 자세한 내용은 [gin과 함께하는 react boilerplate를 공유합니다](https://parkgang.github.io/golang/share-react-boilerplate-with-gin) 을 확인해주세요.
 
 </div>
 
