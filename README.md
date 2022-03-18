@@ -41,7 +41,7 @@ gin server와 함께 react를 편리하게 개발할 수 있는 시작점을 제
 
 &nbsp;server, client 모두 디버깅 환경 마련
 
-&nbsp;이외, 자세한 내용은 [gin과 함께하는 react boilerplate를 공유합니다](https://parkgang.github.io/golang/share-react-boilerplate-with-gin) 을 확인해주세요.
+&nbsp;이외, 자세한 내용은 [gin과 함께하는 react boilerplate를 공유합니다](https://parkgang.github.io/essay/share-react-boilerplate-with-gin/) 을 확인해주세요.
 
 </div>
 
